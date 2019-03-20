@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 5</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-image: url('');
+        background-color: #8e68ff;
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+    
+    <script>
+    // I used Two functions here.  Starter idea at: 
+    // https://codepen.io/ColleenEMc/pen/XmZzWw
+    function upDate(previewPic){
+ /* In this function you should 
+    1) change the url for the background image of the div with the id = "image" 
+    to the source file of the preview image
+
+    
+    2) Change the text  of the div with the id = "image" 
+    to the alt text of the preview image 
+
+    consle.log(previewPic) 
+    */
+
+    let backImage = document.getElementById('image').value;
+
+        document.querySelector('#image').style.backgroundImage = "url("+ previewPic.src +")"
+        document.querySelector('#image').innerHTML= previewPic.alt //change the div
+    
+
+  
+    }
+
+    function unDo(){
+     /* In this function you should 
+    1) Update the url for the background image of the div with the id = "image" 
+    back to the orginal-image.  You can use the css code to see what that original URL was
+    
+    2) Change the text  of the div with the id = "image" 
+    back to the original text.  You can use the html code to see what that original text was
+    */
+    document.querySelector('#image').style.backgroundImage = "url('')"
+    document.querySelector('#image').innerHTML = "Hover over an image below to display here."
+    
+        
+    }
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 5</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img tabindex = "0" class = "preview"  
+            src = "https://tayloirt.github.io/hw3/images/black-girls-code.jpg"
+            alt = "Volunteer with BGC" 
+            onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)" onblur="unDo()">
+
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->  
+        <img tabindex = "0" class = "preview" 
+            alt = "Flower" 
+            src = "https://tayloirt.github.io/hw3/images/testorig.jpg"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)" onblur="unDo()">
+    
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img tabindex = "0" class = "preview"  
+            src = "https://tayloirt.github.io/hw3/images/f8.jpg" 
+            alt = "Strawberries"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)" onblur="unDo()">
+        <img tabindex = "0" class = "preview"  
+            src = "https://tayloirt.github.io/hw3/images/image for IndiaPakistan Water_2.jpg" 
+            alt = "Women in India"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)" onblur="unDo()">
+        <img tabindex = "0" class = "preview"  
+            src = "https://tayloirt.github.io/hw3/images/coverPhoto1.jpg" 
+            alt = "Iris Flower"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)" onblur="unDo()">
+        <img tabindex = "0" class = "preview"  
+            src = "https://tayloirt.github.io/hw3/images/spelman.png" 
+            alt = "Spelman"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)" onblur="unDo()">
+</body>
+</html>
+    
